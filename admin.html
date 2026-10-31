@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex, nofollow, noarchive">
   <title>CERCA · Panel privado</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -174,11 +175,11 @@
 <body>
 <header>
   <div class="brand">
-    <b>CERCA</b>
+    <b>CERCA · Administración</b>
     <small>Consuelo · Esperanza · Restauración · Comunión · Acompañamiento</small>
   </div>
   <div class="header-actions">
-    <a href="index.html" class="btn ghost">← Ir al sitio público</a>
+    <a href="https://yesid1000415.github.io/CERCA/" target="_blank" rel="noopener" class="btn ghost">Ver página pública ↗</a>
     <button id="logout" class="btn gold hidden" type="button">Cerrar sesión</button>
   </div>
 </header>
@@ -187,7 +188,7 @@
   <!-- Sección de Autenticación -->
   <section id="auth" class="card auth">
     <h1 style="margin-top:0;font-size:22px">Panel privado CERCA</h1>
-    <p class="muted">Acceso exclusivo para personas autorizadas por el equipo.</p>
+    <p class="muted">Acceso exclusivo de administración.</p>
     <div class="tabs" style="margin:18px 0">
       <button id="tabLogin" class="tab active" type="button">Ingresar</button>
       <button id="tabSignup" class="tab" type="button">Crear acceso</button>
@@ -400,12 +401,14 @@
   </section>
 </div>
 
-<div class="footer">CERCA · Cerca de Dios, cerca de ti. Todos los derechos reservados.</div>
+<div class="footer">CERCA · Panel Privado de Administración</div>
 
 <script>
 const BASE = 'https://pyncovnrhiuwmipyxfae.supabase.co';
 const KEY = 'sb_publishable_N6tfAKab0Unt6pIIbnO8YA_wpw_JHbu';
-const REDIRECT = window.location.origin + window.location.pathname;
+const REDIRECT = window.location.href.startsWith('http')
+  ? window.location.origin + window.location.pathname
+  : 'https://yesid1000415.github.io/CERCA/';
 
 let session = null, staff = null, allRequests = [], notesByReq = {};
 const $ = id => document.getElementById(id);
