@@ -202,37 +202,67 @@
     footer { text-align: center; padding: 32px 0 16px; color: var(--muted); font-size: 0.88rem; }
   </style>
 
-  <link rel="stylesheet" href="content.css?v=20260928-3">
-</head>
-<body>
+  <style>
+.cerca-posts{display:grid;gap:12px;margin-top:16px}.cerca-post{background:#fff;border:1px solid rgba(14,74,74,.14);border-radius:16px;padding:14px;box-shadow:0 6px 18px rgba(14,74,74,.06);text-align:left}.cerca-post.featured{border:2px solid #c79b45}.cerca-post h4{margin:4px 0 9px;font-size:1.05rem;color:#0e4a4a}.cerca-post p{margin:9px 0;line-height:1.55}.cerca-badge{display:inline-block;background:#f4e6bd;color:#6b5318;border-radius:999px;padding:4px 8px;font-size:.72rem;font-weight:700}.cerca-media{margin:10px 0;border-radius:13px;overflow:hidden;background:#eef4f2}.cerca-media img,.cerca-media video{display:block;width:100%;max-height:480px;object-fit:cover}.cerca-media iframe{display:block;width:100%;aspect-ratio:16/9;border:0}.cerca-link{display:inline-block;margin-top:8px;background:#0e4a4a;color:#fff!important;text-decoration:none;border-radius:10px;padding:9px 13px;font-weight:700}.cerca-general{padding-top:36px;padding-bottom:36px}.cerca-general .cerca-posts{max-width:900px;margin:18px auto 0;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.programs article.cerca-program-entry{cursor:pointer;position:relative;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease;display:flex;flex-direction:column}.programs article.cerca-program-entry:hover,.programs article.cerca-program-entry:focus{transform:translateY(-3px);box-shadow:0 14px 34px rgba(14,74,74,.12);border-color:#c79b45;outline:none}.cerca-program-open{margin-top:auto;padding-top:14px;display:flex;align-items:center;justify-content:space-between;color:#0e4a4a;font-weight:800;border-top:1px solid rgba(14,74,74,.10)}.cerca-program-open b{font-size:1.2rem}.cerca-program-count{align-self:flex-start;margin:4px 0 12px;background:#eef4f2;color:#0e4a4a;border-radius:999px;padding:4px 9px;font-size:.74rem;font-weight:800}
+.cerca-program-dialog{border:0;border-radius:24px;padding:0;width:min(920px,calc(100% - 24px));max-height:92vh;box-shadow:0 28px 100px rgba(0,0,0,.28);background:#fffdf8;color:#153032}.cerca-program-dialog::backdrop{background:rgba(3,25,25,.70);backdrop-filter:blur(4px)}.cerca-program-shell{padding:34px;position:relative;max-height:92vh;overflow:auto}.cerca-program-close{position:sticky;float:right;top:0;z-index:3;border:0;width:42px;height:42px;border-radius:50%;background:#eef4f2;color:#0e4a4a;font-size:1.8rem;line-height:1}.cerca-program-head{padding-right:52px;margin-bottom:22px}.cerca-program-head h2{font-family:"Libre Baskerville",Georgia,serif;font-weight:400;font-size:clamp(2rem,4vw,3rem);line-height:1.12;margin:4px 0 10px;color:#153032}.cerca-program-head>p:last-child{color:#617172;max-width:720px}.cerca-program-icon{font-size:2.4rem;display:block;margin-bottom:6px}.cerca-program-posts{display:grid;gap:20px}.cerca-program-dialog .cerca-post{padding:20px}.cerca-program-dialog .cerca-post h4{font-size:1.35rem}.cerca-program-dialog .cerca-media img{max-height:none;object-fit:contain;background:#fff}.cerca-empty{background:#f6f0e5;border-radius:18px;padding:24px}.cerca-empty strong{color:#0e4a4a}.cerca-empty p{margin-bottom:0;color:#617172}
+@media(max-width:640px){.cerca-general .cerca-posts{grid-template-columns:1fr}.cerca-media img,.cerca-media video{max-height:360px}.cerca-program-shell{padding:22px 16px}.cerca-program-dialog .cerca-media img{max-height:none}.cerca-program-head{padding-right:38px}}
+
+
+html{scroll-behavior:smooth;scroll-padding-top:24px}.content-hub{margin:36px 0}.section-head{margin-bottom:22px}.section-head h2{font-size:clamp(1.6rem,3vw,2rem);margin:6px 0}.eyebrow{color:var(--brand2);font-size:.75rem;letter-spacing:.12em;font-weight:800;margin:0}.section-intro{color:var(--muted);max-width:660px}.content-nav{display:flex;gap:8px;flex-wrap:wrap;margin:20px 0 28px}.content-nav a{border:1px solid var(--line);background:white;padding:8px 13px;border-radius:999px;font-size:.88rem;font-weight:600}.content-nav a:hover{background:#eaf2f9}.programs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.programs article{padding:24px;border:1px solid var(--line);border-radius:18px;background:white;box-shadow:var(--shadow)}.programs h3{margin:14px 0 8px;font-size:1.12rem}.programs p{color:var(--muted);font-size:.94rem;margin:0 0 22px}.program-icon{font-size:1.8rem;width:58px;height:58px;display:grid;place-items:center;background:#edf5f4;border-radius:18px}.reading-section{margin:28px 0;padding:26px;background:#fff;border:1px solid var(--line);border-radius:20px}.reading-section h2{margin:6px 0 8px}.reading-section .cerca-posts{grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr))}.cerca-posts:not(:empty)+.section-placeholder{display:none}.section-placeholder{font-size:.94rem;color:var(--muted);padding:18px;background:#f6f8fb;border-radius:12px}.cerca-general{padding:26px 0}.cerca-general .section-head{margin-bottom:12px}.cerca-program-entry:focus-visible,.content-nav a:focus-visible{outline:3px solid var(--gold);outline-offset:4px}.cerca-program-close{cursor:pointer}.cerca-post{overflow-wrap:anywhere}.cerca-post .cerca-media img{object-fit:contain}.cerca-load-status:empty{display:none}@media(max-width:800px){.programs{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:520px){.programs{grid-template-columns:1fr}.hero{padding:24px}.wrap{padding:16px}.reading-section{padding:20px}.wa-route-btn{flex-wrap:wrap;gap:8px}}
+
+</style>
+<style id="cerca-institutional-design">
+:root{--bg:#f5f5f0;--card:#fff;--ink:#183d38;--muted:#657773;--line:#dde4df;--brand:#124e45;--brand2:#267565;--gold:#be9858;--shadow:0 8px 30px rgba(23,59,49,.045);--radius:16px}
+body{background:var(--bg);font-family:Inter,"Segoe UI",Arial,sans-serif;line-height:1.65}a,button,input,select,textarea{-webkit-tap-highlight-color:transparent}a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offset:4px}.wrap{max-width:1240px;padding:0 40px}.topbar{min-height:116px;padding:24px 0;border-bottom:1px solid var(--line);margin-bottom:32px}.brand{gap:16px}.logo{height:54px;width:54px;border-radius:12px;background:var(--brand);color:#e7d5ac;font-family:Georgia,serif;font-size:32px;font-weight:400;box-shadow:none;border:1px solid #35665d}.brand h1{letter-spacing:.16em;font-size:1.4rem;font-weight:800}.brand p{font-size:.76rem;letter-spacing:.025em}.nav-links{gap:6px;align-items:center}.navbtn{background:transparent;border:0;font-size:.82rem;padding:10px 12px}.navbtn:last-child{background:var(--brand);color:white;border-radius:7px;padding:11px 18px}.navbtn:last-child:hover{background:#206557}.hero{position:relative;isolation:isolate;overflow:hidden;border-radius:20px;padding:62px 54px;display:grid;grid-template-columns:1.4fr .8fr;gap:52px;align-items:center;background:linear-gradient(115deg,#103f38,#19574c);box-shadow:none;margin-bottom:28px}.hero:after{content:"";position:absolute;z-index:-1;width:480px;height:480px;border:1px solid #ffffff12;border-radius:50%;right:-200px;top:-180px;box-shadow:0 0 0 60px #ffffff03,0 0 0 120px #ffffff03}.hero .eyebrow{color:#e0c99f;font-size:.69rem;letter-spacing:.16em;margin:0 0 22px}.hero h2{font-family:Georgia,"Times New Roman",serif;font-weight:400;font-size:clamp(2.4rem,4.2vw,3.65rem);line-height:1.12;letter-spacing:-.025em;max-width:650px;margin-bottom:22px}.hero p{font-size:.96rem;color:#d1e2db}.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}.hero-actions a{display:inline-flex;padding:12px 20px;border-radius:7px;font-weight:700;font-size:.83rem;background:#dec393;color:#173e36}.hero-actions a.secondary{background:transparent;color:white;border:1px solid #ffffff55}.hero-note{border-left:2px solid var(--gold);padding:12px 0 12px 28px;align-self:center}.hero-note blockquote{font-family:Georgia,serif;font-size:1.5rem;line-height:1.5;margin:0 0 18px;color:#fff}.hero-note cite{font-style:normal;font-size:.7rem;letter-spacing:.16em;color:#dec393}.hero .badges{margin-top:28px;gap:8px}.badge{font-size:.7rem;padding:5px 10px;background:#ffffff08;border-color:#ffffff22}.values-strip{display:grid;grid-template-columns:repeat(5,1fr);gap:0;padding:18px 0 26px;margin-bottom:28px;border-bottom:1px solid var(--line)}.values-strip span{font-size:.74rem;text-align:center;letter-spacing:.03em;color:var(--muted);border-right:1px solid var(--line)}.values-strip span:last-child{border:0}.values-strip b{color:var(--brand);font-weight:800;margin-right:6px}.grid{gap:24px;grid-template-columns:1.22fr .78fr}.card{padding:30px;border-radius:var(--radius);box-shadow:none}.pill{background:transparent;color:#8a6b35;padding:0;font-size:.65rem;letter-spacing:.13em;text-transform:uppercase;margin-bottom:10px}.card h3{font-size:1.25rem;line-height:1.4;letter-spacing:-.025em}.sub{font-size:.88rem}label{font-size:.8rem;font-weight:650;margin:17px 0 7px}input,select,textarea{border-radius:8px;border-color:#d4ded8;padding:12px;background:#fcfdfb;font-size:.9rem}input:focus,select:focus,textarea:focus{outline:2px solid #a4c7b9;outline-offset:1px}.btn{border-radius:8px;box-shadow:none;background:var(--brand);font-size:.88rem;padding:14px}.check{font-size:.78rem;line-height:1.6}.security-note{font-size:.74rem}.item{background:#f7f8f4;border:0;border-radius:9px;font-size:.85rem;padding:16px}.wa-route-btn{border-radius:8px;font-size:.81rem;background:#fcfdfb}.list{gap:20px}.content-hub{margin:64px 0 32px;padding-top:42px;border-top:1px solid var(--line)}.section-head h2{font-family:Georgia,serif;font-weight:400;font-size:2.05rem;letter-spacing:-.02em}.eyebrow{font-size:.66rem;letter-spacing:.13em}.section-intro{font-size:.9rem}.content-nav{margin:24px 0 34px}.content-nav a{border-radius:7px;font-size:.78rem;padding:9px 15px}.reading-section{border-radius:14px;padding:28px;margin:26px 0;background:white}.reading-section h2{font-family:Georgia,serif;font-size:1.65rem;font-weight:400}.programs{gap:18px}.programs article{padding:27px;border-radius:14px;box-shadow:none;min-height:245px;transition:transform .2s,border-color .2s}.program-icon{height:43px;width:43px;font-size:.85rem;font-weight:700;color:var(--brand);background:#edf3ef;border-radius:11px;letter-spacing:.05em}.programs h3{font-size:1.08rem;font-weight:700}.programs p{font-size:.84rem}.cerca-program-open{font-size:.78rem;font-weight:650}.section-placeholder{font-size:.83rem;background:#f8f9f5}.cerca-post{box-shadow:none;border-radius:12px;padding:22px}.cerca-program-dialog{background:#fafbf7}.cerca-program-head h2{font-family:Georgia,serif}.cerca-program-icon{font-size:1rem;color:var(--brand);font-weight:700}.footer-brand{display:flex;align-items:center;justify-content:space-between;gap:20px;border-top:1px solid var(--line);padding:30px 0 36px;text-align:left}.footer-brand strong{font-size:1.1rem;letter-spacing:.18em;color:var(--brand)}.footer-brand p{font-size:.74rem;margin:4px 0}.footer-caption{max-width:300px;text-align:right;color:var(--muted)}@media(max-width:960px){.hero{padding:40px 32px;gap:30px}.hero h2{font-size:2.6rem}.hero-note blockquote{font-size:1.25rem}.grid{grid-template-columns:1fr}.programs{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:640px){.wrap{padding:0 18px}.topbar{padding:22px 0;gap:18px;margin-bottom:20px}.nav-links{width:100%;justify-content:space-between}.navbtn{padding:8px;font-size:.74rem}.navbtn:last-child{padding:9px 13px}.hero{grid-template-columns:1fr;padding:34px 24px;gap:30px}.hero h2{font-size:2.45rem}.hero-note{padding-left:20px}.hero-note blockquote{font-size:1.2rem}.hero .badges{gap:6px}.badge{font-size:.65rem}.values-strip{grid-template-columns:repeat(2,1fr);gap:12px;padding-bottom:20px}.values-strip span{border:0;text-align:left}.values-strip span:last-child{grid-column:1/-1}.card{padding:24px 20px}.programs{grid-template-columns:1fr}.programs article{min-height:0;padding:24px}.content-hub{margin-top:42px;padding-top:32px}.section-head h2{font-size:1.8rem}.content-nav{gap:7px}.content-nav a{font-size:.73rem;padding:8px 11px}.reading-section{padding:24px 20px}.footer-brand{align-items:flex-start;flex-direction:column}.footer-caption{text-align:left}.hero-actions a{padding:11px 15px;font-size:.78rem}}
+</style>
+<style id="cerca-final-refinement">
+.institution-intro{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px;padding:32px 0 14px;align-items:start}.institution-intro h2{font-family:Georgia,serif;font-weight:400;font-size:clamp(1.9rem,3vw,2.6rem);line-height:1.23;letter-spacing:-.025em;margin:12px 0}.institution-intro p{font-size:.94rem;color:var(--muted);margin-top:0}.institution-intro .intro-lead{color:var(--ink);font-size:1.08rem;line-height:1.7}.institution-intro a{font-size:.83rem;font-weight:700;border-bottom:1px solid var(--gold);padding-bottom:5px}.support-heading{padding:42px 0 18px;border-top:1px solid var(--line);margin-top:46px}.support-heading h2{font-family:Georgia,serif;font-size:2.1rem;font-weight:400;margin:8px 0}.support-heading p:last-child{color:var(--muted);font-size:.9rem;max-width:660px}.support-layout{margin-bottom:48px}.programs-heading{margin:34px 0 20px}.programs-heading h3{font-size:1.25rem;letter-spacing:-.02em;margin:4px 0}.programs-heading p{color:var(--muted);font-size:.87rem;margin:0}.cerca-program-entry{touch-action:manipulation}.cerca-program-close:focus-visible{outline:3px solid var(--gold);outline-offset:3px}.cerca-post h4{line-height:1.4}.cerca-program-dialog .eyebrow{color:var(--brand2)}.hero-actions a:hover{filter:brightness(1.06)}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}@media(max-width:700px){.institution-intro{grid-template-columns:1fr;gap:16px;padding-top:16px}.institution-intro h2{font-size:2rem}.support-heading h2{font-size:1.8rem}.support-heading{margin-top:34px;padding-top:30px}}@media print{.hero{color:#183d38;background:white;border:1px solid #ddd}.hero p,.hero-note blockquote{color:#183d38}.hero-actions,.nav-links,.content-nav{display:none}.programs{grid-template-columns:repeat(2,1fr)}.card,.programs article{break-inside:avoid}}
+</style><style>.skip-link{position:absolute;left:16px;top:-100px;padding:12px 18px;background:white;color:var(--brand);z-index:20;border:2px solid var(--brand)}.skip-link:focus{top:12px}</style></head>
+<body><a class="skip-link" href="#nosotros">Saltar al contenido</a>
   <div class="wrap">
     <!-- Barra superior limpia (sin enlaces al panel privado) -->
     <header class="topbar">
       <div class="brand">
-        <div class="logo">C</div>
+        <div class="logo" aria-hidden="true">C</div>
         <div>
           <h1>CERCA</h1>
           <p>Cerca de Dios, cerca de ti</p>
         </div>
       </div>
       <div class="nav-links">
-        <a class="navbtn" href="#cerca-content-section">📖 Contenidos y Devocionales</a>
+        <a class="navbtn" href="#nosotros">Nosotros</a><a class="navbtn" href="#cerca-content-section">Contenidos</a><a class="navbtn" href="#devocionales">Devocionales</a><a class="navbtn" href="#cerca-form">Solicitar acompañamiento</a>
       </div>
     </header>
 
     <!-- Sección principal (Hero) -->
-    <section class="hero">
-      <h2>Un espacio de fe, escucha y esperanza</h2>
-      <p>Consuelo, Esperanza, Restauración, Comunión y Acompañamiento. Compartimos tus cargas en oración y caminamos junto a ti con orientación cristiana.</p>
-      <div class="badges">
-        <span class="badge">🙏 Peticiones de oración</span>
-        <span class="badge">💬 Orientación espiritual y psicológica</span>
-        <span class="badge">🤝 Acompañamiento confidencial</span>
-      </div>
-    </section>
+    <main id="contenido-principal">
+    <section class="hero" aria-labelledby="hero-title">
+<div class="hero-copy"><p class="eyebrow">FE · ESCUCHA · ACOMPAÑAMIENTO</p><h2 id="hero-title">Cerca de Dios.<br>Cerca de ti.</h2><p>Un espacio cristiano para encontrar consuelo, renovar la esperanza y caminar acompañado en cada etapa de la vida.</p><div class="hero-actions"><a href="#cerca-form">Estamos para escucharte <span aria-hidden="true">↗</span></a><a class="secondary" href="#cerca-content-section">Explorar contenidos</a></div><div class="badges"><span class="badge">Peticiones de oración</span><span class="badge">Orientación cristiana</span><span class="badge">Escucha y acompañamiento</span></div></div>
+<aside class="hero-note"><blockquote>«Cercano está Jehová a los quebrantados de corazón»</blockquote><cite>SALMOS 34:18</cite></aside>
+</section>
+<div class="values-strip" aria-label="Nuestros pilares"><span><b>C</b> Consuelo</span><span><b>E</b> Esperanza</span><span><b>R</b> Restauración</span><span><b>C</b> Comunión</span><span><b>A</b> Acompañamiento</span></div>
 
-    <!-- Sección de Solicitudes y Rutas Directas -->
-    <main class="grid">
+<section id="nosotros" class="institution-intro" aria-labelledby="about-title"><div><p class="eyebrow">NUESTRO PROPÓSITO</p><h2 id="about-title">La fe nos acerca.<br>El amor nos mueve.</h2></div><div><p class="intro-lead">CERCA es un espacio cristiano de consuelo, esperanza, restauración, comunión y acompañamiento.</p><p>Queremos acompañarte a través de la oración, la escucha y la orientación cristiana. Aquí puedes compartir una necesidad, encontrar una palabra de aliento y acceder a contenidos para distintas etapas de la vida.</p><a href="#acompanamiento">Conoce cómo podemos acompañarte <span aria-hidden="true">→</span></a></div></section>
+    <!-- Contenedor donde content.js carga las publicaciones -->
+    <section id="cerca-content-section" class="content-hub" aria-labelledby="content-title">
+<div class="section-head"><p class="eyebrow">FE PARA CADA ETAPA DE LA VIDA</p><h2 id="content-title">Un lugar para crecer y compartir</h2><p class="section-intro">Encuentra mensajes, devocionales y recursos para acompañarte a ti y a tu familia.</p></div>
+<nav class="content-nav" aria-label="Áreas de contenido"><a href="#cerca-general-content">General</a><a href="#cerca-programas">Programas y comunidad</a><a href="#oracion">Oración</a><a href="#devocionales">Devocionales</a></nav>
+<p id="cerca-load-status" class="cerca-load-status" role="status" aria-live="polite">Cargando publicaciones…</p>
+<section id="cerca-general-content" class="reading-section" aria-labelledby="general-title"><div class="section-head"><p class="eyebrow">CERCA HOY</p><h2 id="general-title">Contenido para acompañarte</h2></div><div class="cerca-posts"></div><p class="section-placeholder">Aquí encontrarás las publicaciones generales que comparta el equipo de CERCA.</p></section>
+<div class="programs-heading"><p class="eyebrow">COMUNIDAD CERCA</p><h3>Un espacio para cada etapa</h3><p>Selecciona un programa para descubrir sus publicaciones y recursos.</p></div><div id="cerca-programas" class="programs"><article id="programa-ninos"><span class="program-icon" aria-hidden="true">01</span><h3>CERCA Niños</h3><p>Un espacio para descubrir el amor de Dios, aprender valores y crecer en la fe.</p></article>
+<article id="programa-adolescentes"><span class="program-icon" aria-hidden="true">02</span><h3>CERCA Adolescentes</h3><p>Fe y orientación para acompañar tus preguntas, cambios y decisiones.</p></article>
+<article id="programa-jovenes"><span class="program-icon" aria-hidden="true">03</span><h3>CERCA Jóvenes</h3><p>Propósito, esperanza y herramientas para caminar con Dios cada día.</p></article>
+<article id="programa-senoritas"><span class="program-icon" aria-hidden="true">04</span><h3>CERCA Señoritas</h3><p>Un espacio de fe, identidad y crecimiento para cada etapa de tu vida.</p></article>
+<article id="programa-familia"><span class="program-icon" aria-hidden="true">05</span><h3>CERCA Familia</h3><p>Reflexiones para fortalecer el amor, el diálogo y la unión en el hogar.</p></article>
+<article id="programa-programas"><span class="program-icon" aria-hidden="true">06</span><h3>Programas especiales</h3><p>Encuentros, actividades y oportunidades para compartir y servir.</p></article>
+</div>
+<section id="oracion" class="reading-section" aria-labelledby="oracion-title"><div class="section-head"><p class="eyebrow">PRESENTEMOS NUESTRAS CARGAS A DIOS</p><h2 id="oracion-title">Oración</h2><p class="section-intro">Unidos en la fe, encontramos consuelo y fortaleza para seguir adelante.</p></div><div class="cerca-posts"></div><p class="section-placeholder">Aquí aparecerán los mensajes de oración publicados por el equipo de CERCA.</p></section>
+<section id="devocionales" class="reading-section" aria-labelledby="devocionales-title"><div class="container"><div class="section-head"><p class="eyebrow">UN MOMENTO CON DIOS</p><h2 id="devocionales-title">Devocionales</h2><p class="section-intro">Haz una pausa, reflexiona en su Palabra y lleva su esperanza a tu día.</p></div><div class="cerca-posts"></div><p class="section-placeholder">Aquí encontrarás los devocionales publicados por el equipo de CERCA.</p></div></section>
+</section>
+
+<section id="acompanamiento" class="support-heading" aria-labelledby="support-title"><p class="eyebrow">UN ESPACIO PARA ESCUCHARTE</p><h2 id="support-title">Estamos cerca, también en los momentos difíciles.</h2><p>Comparte tu petición o elige un área de acompañamiento. Puedes enviar tu mensaje sin dejar un teléfono; si deseas que te contactemos, incluye tus datos.</p></section>    <!-- Sección de Solicitudes y Rutas Directas -->
+    <div class="grid support-layout">
       <section class="card">
         <span class="pill">Formulario confidencial</span>
         <h3>Envíanos tu petición o solicitud</h3>
@@ -258,14 +288,14 @@
             <div>
               <label for="request_type">¿En qué podemos acompañarte?</label>
               <select id="request_type" name="request_type" required>
-                <option value="oracion">🙏 Petición de oración</option>
-                <option value="pastoral">📖 Orientación pastoral</option>
-                <option value="psicologia">🧠 Escucha y orientación psicológica</option>
-                <option value="evangelismo">✨ Conocer más de Dios</option>
-                <option value="hablar">💬 Necesito hablar con alguien</option>
-                <option value="ayuda">🤝 Solicitud de ayuda</option>
-                <option value="servir">🙌 Quiero servir en CERCA</option>
-                <option value="aporte">💛 Quiero realizar un aporte</option>
+                <option value="oracion">Petición de oración</option>
+                <option value="pastoral">Orientación pastoral</option>
+                <option value="psicologia">Escucha y orientación psicológica</option>
+                <option value="evangelismo">Conocer más de Dios</option>
+                <option value="hablar">Necesito hablar con alguien</option>
+                <option value="ayuda">Solicitud de ayuda</option>
+                <option value="servir">Quiero servir en CERCA</option>
+                <option value="aporte">Quiero realizar un aporte</option>
               </select>
             </div>
           </div>
@@ -283,7 +313,7 @@
           </div>
 
           <button type="submit" id="submit-btn" class="btn">Enviar solicitud a CERCA</button>
-          <div id="form-msg" class="msg"></div>
+          <div id="form-msg" class="msg" role="status" aria-live="polite"></div>
         </form>
       </section>
 
@@ -313,14 +343,10 @@
           </div>
         </div>
       </aside>
+    </div>
+
     </main>
-
-    <!-- Contenedor donde content.js carga las publicaciones -->
-    <section id="cerca-content-section" style="margin-top: 36px;"></section>
-
-    <footer>
-      <p>© CERCA — Consuelo, Esperanza, Restauración, Comunión y Acompañamiento.</p>
-    </footer>
+    <footer class="footer-brand"><div><strong>CERCA</strong><p>Cerca de Dios, cerca de ti.</p><p>Consuelo · Esperanza · Restauración · Comunión · Acompañamiento</p></div><p class="footer-caption">Un espacio cristiano de fe, escucha y esperanza.<br>© CERCA. Todos los derechos reservados.</p></footer>
   </div>
 
   <script>
@@ -418,9 +444,10 @@
         routesBox.innerHTML = activeRoutes.map(r => {
           const num = String(r.whatsapp_number).replace(/\D/g, '');
           const finalNum = num.startsWith('57') ? num : '57' + num;
+          const routeLabel = String(r.display_name || r.route_key || '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
           const text = encodeURIComponent('Hola, vengo desde la página CERCA y me gustaría recibir orientación en el área de ' + (r.display_name || r.route_key) + '.');
           return `<a class="wa-route-btn" target="_blank" rel="noopener" href="https://wa.me/${finalNum}?text=${text}">
-            <span>${r.display_name || r.route_key}</span>
+            <span>${routeLabel}</span>
             <span>Escribir por WhatsApp →</span>
           </a>`;
         }).join('');
@@ -433,6 +460,33 @@
   })();
   </script>
 
-  <script src="content.js?v=20260928-3"></script>
+  <script>
+(()=>{const BASE='https://pyncovnrhiuwmipyxfae.supabase.co';const KEY='sb_publishable_N6tfAKab0Unt6pIIbnO8YA_wpw_JHbu';
+const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const PROGRAMS=[
+ {key:'ninos',match:'niños',title:'CERCA Niños',icon:'01'},
+ {key:'adolescentes',match:'adolescentes',title:'CERCA Adolescentes',icon:'02'},
+ {key:'jovenes',match:'jóvenes',title:'CERCA Jóvenes',icon:'03'},
+ {key:'senoritas',match:'señoritas',title:'CERCA Señoritas',icon:'04'},
+ {key:'familia',match:'familia',title:'CERCA Familia',icon:'05'},
+ {key:'programas',match:'programas especiales',title:'Programas especiales',icon:'06'}
+];
+let grouped={};
+function youtubeEmbed(u){try{const x=new URL(u);let id='';if(x.hostname==='youtu.be')id=x.pathname.slice(1).split('/')[0];else if(['youtube.com','www.youtube.com','m.youtube.com'].includes(x.hostname))id=x.searchParams.get('v')||((x.pathname.match(/\/(shorts|embed)\/([^/?]+)/)||[])[2]||'');return id?'https://www.youtube.com/embed/'+encodeURIComponent(id):'';}catch{return'';}}
+function media(p){if(!p.media_url)return'';const u=esc(p.media_url),yt=youtubeEmbed(p.media_url);if(p.content_type==='video'){if(yt)return '<div class="cerca-media"><iframe src="'+esc(yt)+'" title="'+esc(p.title)+'" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>';return '<div class="cerca-media"><video controls preload="metadata" src="'+u+'"></video></div>';}return '<div class="cerca-media"><img src="'+u+'" alt="'+esc(p.title)+'" loading="lazy"></div>';}
+function safeUrl(v){try{const u=new URL(v);return ['https:','http:'].includes(u.protocol)?u.href:'';}catch{return '';}}
+function card(p){p={...p,media_url:safeUrl(p.media_url),link_url:safeUrl(p.link_url)};return '<article class="cerca-post '+(p.featured?'featured':'')+'">'+(p.featured?'<span class="cerca-badge">Destacado</span>':'')+'<h4>'+esc(p.title)+'</h4>'+media(p)+(p.body?'<p>'+esc(p.body).replace(/\n/g,'<br>')+'</p>':'')+(p.link_url?'<a class="cerca-link" href="'+esc(p.link_url)+'" target="_blank" rel="noopener">'+esc(p.link_label||'Ver más')+'</a>':'')+'</article>';}
+function programTarget(label){return [...document.querySelectorAll('.programs article')].find(a=>(a.querySelector('h3')?.textContent||'').toLowerCase().includes(label));}
+function ensureProgramDialog(){let d=document.querySelector('#cerca-program-dialog');if(d)return d;d=document.createElement('dialog');d.id='cerca-program-dialog';d.className='cerca-program-dialog';d.setAttribute('aria-label','Publicaciones del programa CERCA');d.innerHTML='<div class="cerca-program-shell"><button class="cerca-program-close" type="button" aria-label="Cerrar">×</button><div class="cerca-program-head"></div><div class="cerca-program-content"></div></div>';document.body.appendChild(d);d.querySelector('.cerca-program-close').addEventListener('click',()=>d.close());d.addEventListener('click',e=>{if(e.target===d)d.close();});return d;}
+function openProgram(def){const d=ensureProgramDialog(),entry=programTarget(def.match),intro=entry?.querySelector('p')?.textContent||'',posts=grouped[def.key]||[];d.querySelector('.cerca-program-head').innerHTML='<span class="cerca-program-icon">'+def.icon+'</span><p class="eyebrow">PROGRAMA CERCA</p><h2>'+esc(def.title)+'</h2>'+(intro?'<p>'+esc(intro)+'</p>':'');d.querySelector('.cerca-program-content').innerHTML=posts.length?'<div class="cerca-program-posts">'+posts.map(card).join('')+'</div>':'<div class="cerca-empty"><strong>Este espacio está listo.</strong><p>Muy pronto encontrarás aquí mensajes, imágenes, videos y recursos preparados para esta sección.</p></div>';if(typeof d.showModal==='function')d.showModal();else d.setAttribute('open','');}
+function wirePrograms(){ensureProgramDialog();PROGRAMS.forEach(def=>{const a=programTarget(def.match);if(!a||a.dataset.cercaReady)return;a.dataset.cercaReady='1';a.classList.add('cerca-program-entry');a.tabIndex=0;a.setAttribute('role','button');a.setAttribute('aria-label','Abrir '+def.title);const c=document.createElement('div');c.className='cerca-program-open';c.innerHTML='<span>Abrir sección</span><b aria-hidden="true">→</b>';a.appendChild(c);a.addEventListener('click',()=>openProgram(def));a.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openProgram(def);}});});}
+function updateCounts(){PROGRAMS.forEach(def=>{const a=programTarget(def.match);if(!a)return;let badge=a.querySelector('.cerca-program-count');const n=(grouped[def.key]||[]).length;if(!n){badge?.remove();return;}if(!badge){badge=document.createElement('span');badge.className='cerca-program-count';a.insertBefore(badge,a.querySelector('.cerca-program-open'));}badge.textContent=n+' '+(n===1?'publicación':'publicaciones');});}
+function target(section){const map={oracion:()=>document.querySelector('#oracion'),devocionales:()=>document.querySelector('#devocionales .container')};return map[section]?map[section]():null;}
+function generalBox(){let box=document.querySelector('#cerca-general-content');if(box)return box.querySelector('.cerca-posts');const hero=document.querySelector('.hero');if(!hero)return null;const s=document.createElement('section');s.className='section cerca-general';s.id='cerca-general-content';s.innerHTML='<div class="container"><div class="section-head center"><p class="eyebrow">CERCA HOY</p><h2>Contenido para acompañarte</h2></div><div class="cerca-posts"></div></div>';hero.insertAdjacentElement('afterend',s);return s.querySelector('.cerca-posts');}
+function renderNonPrograms(){for(const [section,posts] of Object.entries(grouped)){if(PROGRAMS.some(x=>x.key===section))continue;if(section==='general'){const b=generalBox();if(b)b.innerHTML=posts.map(card).join('');continue;}const t=target(section);if(!t)continue;let box=t.querySelector(':scope > .cerca-posts');if(!box){box=document.createElement('div');box.className='cerca-posts';t.appendChild(box);}box.innerHTML=posts.map(card).join('');}}
+async function load(){wirePrograms();try{const r=await fetch(BASE+'/rest/v1/content_posts?select=*&order=featured.desc,starts_at.desc',{headers:{apikey:KEY}});if(!r.ok)throw new Error('HTTP '+r.status);const rows=await r.json();grouped={};const now=Date.now(); rows.filter(p=>p.active === true && (!p.starts_at || new Date(p.starts_at).getTime()<=now) && (!p.ends_at || new Date(p.ends_at).getTime()>now)).forEach(p=>(grouped[p.section]??=[]).push(p));updateCounts();renderNonPrograms();document.getElementById('cerca-load-status').textContent='';}catch(e){document.getElementById('cerca-load-status').textContent='No fue posible cargar las publicaciones. Puedes volver a intentar recargando la página.'; console.warn('CERCA contenido:',e);}}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',load);else load();})();
+
+</script>
 </body>
 </html>
