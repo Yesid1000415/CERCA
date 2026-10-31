@@ -74,7 +74,7 @@
     .brand h1 { font-size: 1.25rem; margin: 0; }
     .brand p { margin: 0; color: var(--muted); font-size: 0.92rem; }
     .nav-links { display: flex; gap: 8px; flex-wrap: wrap; }
-    .adminlink {
+    .navbtn {
       font-size: 0.9rem;
       padding: 9px 14px;
       border-radius: 12px;
@@ -83,7 +83,7 @@
       font-weight: 600;
       transition: background 0.2s;
     }
-    .adminlink:hover { background: #f1f5f9; }
+    .navbtn:hover { background: #f1f5f9; }
     .hero {
       background: linear-gradient(135deg, rgba(31, 95, 139, 0.96), rgba(47, 125, 109, 0.93));
       color: #fff;
@@ -154,12 +154,6 @@
     }
     .btn:hover { opacity: 0.95; transform: translateY(-1px); }
     .btn:disabled { opacity: 0.65; cursor: not-allowed; transform: none; }
-    .btn-sec {
-      background: #eef4fa;
-      color: var(--ink);
-      border: 1px solid var(--line);
-      box-shadow: none;
-    }
     .msg {
       margin-top: 14px;
       padding: 13px 14px;
@@ -208,12 +202,11 @@
     footer { text-align: center; padding: 32px 0 16px; color: var(--muted); font-size: 0.88rem; }
   </style>
 
-  <!-- Hoja de estilos para las tarjetas de contenido dinámico -->
   <link rel="stylesheet" href="content.css?v=20260928-3">
 </head>
 <body>
   <div class="wrap">
-    <!-- Barra superior -->
+    <!-- Barra superior limpia (sin enlaces al panel privado) -->
     <header class="topbar">
       <div class="brand">
         <div class="logo">C</div>
@@ -223,9 +216,7 @@
         </div>
       </div>
       <div class="nav-links">
-        <a class="adminlink" href="#cerca-content-section">Contenidos y Devocionales</a>
-        <a class="adminlink" href="equipo.html">Equipo CERCA</a>
-        <a class="adminlink" href="admin.html">Panel privado</a>
+        <a class="navbtn" href="#cerca-content-section">📖 Contenidos y Devocionales</a>
       </div>
     </header>
 
@@ -324,7 +315,7 @@
       </aside>
     </main>
 
-    <!-- Contenedor donde content.js carga las publicaciones de content_posts -->
+    <!-- Contenedor donde content.js carga las publicaciones -->
     <section id="cerca-content-section" style="margin-top: 36px;"></section>
 
     <footer>
@@ -332,7 +323,6 @@
     </footer>
   </div>
 
-  <!-- Lógica de conexión con Supabase para el formulario y las rutas de WhatsApp -->
   <script>
   (() => {
     const SUPABASE_URL = 'https://pyncovnrhiuwmipyxfae.supabase.co';
@@ -348,7 +338,6 @@
       formMsg.className = 'msg ' + (isError ? 'err' : 'ok');
     }
 
-    // Mapea el tipo seleccionado a request_type y route_key tal como los filtra admin.html
     function resolveRouting(selectedValue) {
       if (['pastoral', 'psicologia', 'evangelismo'].includes(selectedValue)) {
         return { request_type: 'hablar', route_key: selectedValue };
@@ -412,7 +401,6 @@
       }
     });
 
-    // Cargar las rutas de WhatsApp configuradas en el panel admin
     async function loadPublicRoutes() {
       try {
         const res = await fetch(SUPABASE_URL + '/rest/v1/contact_routes?select=*&order=route_key', {
@@ -445,7 +433,6 @@
   })();
   </script>
 
-  <!-- Script externo de contenidos y devocionales -->
   <script src="content.js?v=20260928-3"></script>
 </body>
 </html>
