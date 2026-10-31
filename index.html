@@ -7,6 +7,7 @@
   <meta name="description" content="Consuelo, Esperanza, Restauración, Comunión y Acompañamiento. Un espacio cristiano para orar, crecer y encontrar orientación.">
   <link rel="canonical" href="https://yesid1000415.github.io/CERCA/">
   
+  <!-- Open Graph / Facebook / WhatsApp -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="CERCA">
   <meta property="og:title" content="CERCA | Cerca de Dios, cerca de ti">
@@ -19,47 +20,375 @@
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="CERCA — Cerca de Dios, cerca de ti">
   
+  <!-- Twitter / X -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="CERCA | Cerca de Dios, cerca de ti">
   <meta name="twitter:description" content="Un espacio cristiano de consuelo, esperanza, restauración, comunión y acompañamiento.">
   <meta name="twitter:image" content="https://pyncovnrhiuwmipyxfae.supabase.co/functions/v1/cerca-social-card?v=1">
+
+  <!-- Estilos base recuperados y optimizados -->
+  <style>
+    :root {
+      --bg: #f6f8fb;
+      --card: #ffffff;
+      --ink: #163047;
+      --muted: #5a6d7e;
+      --line: #dbe4ee;
+      --brand: #1f5f8b;
+      --brand2: #2f7d6d;
+      --gold: #d9a441;
+      --danger: #b84a39;
+      --ok: #256d46;
+      --shadow: 0 12px 32px rgba(17, 37, 56, 0.08);
+      --radius: 18px;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: linear-gradient(180deg, #eef4fa 0%, #f8fafc 240px, var(--bg) 100%);
+      color: var(--ink);
+      line-height: 1.55;
+    }
+    a {
+      color: var(--brand);
+      text-decoration: none;
+    }
+    .wrap {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      padding: 8px 0 18px;
+      flex-wrap: wrap;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .logo {
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--brand), var(--brand2));
+      display: grid;
+      place-items: center;
+      color: #fff;
+      font-weight: 800;
+      box-shadow: var(--shadow);
+    }
+    .brand h1 {
+      font-size: 1.25rem;
+      margin: 0;
+    }
+    .brand p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+    .adminlink {
+      font-size: 0.92rem;
+      padding: 10px 14px;
+      border-radius: 12px;
+      background: #fff;
+      border: 1px solid var(--line);
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+    .adminlink:hover {
+      background: #f1f5f9;
+    }
+    .hero {
+      background: linear-gradient(135deg, rgba(31, 95, 139, 0.96), rgba(47, 125, 109, 0.93));
+      color: #fff;
+      border-radius: 24px;
+      padding: 32px;
+      box-shadow: var(--shadow);
+      margin-bottom: 24px;
+    }
+    .hero h2 {
+      margin: 0 0 10px;
+      font-size: clamp(1.6rem, 2.8vw, 2.35rem);
+    }
+    .hero p {
+      margin: 0 0 18px;
+      max-width: 760px;
+      color: rgba(255, 255, 255, 0.92);
+    }
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .badge {
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 0.88rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 22px;
+      align-items: start;
+    }
+    @media (max-width: 920px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 22px;
+      box-shadow: var(--shadow);
+    }
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 8px;
+      font-size: 1.2rem;
+    }
+    .sub {
+      color: var(--muted);
+      margin-top: 0;
+      margin-bottom: 18px;
+      font-size: 0.95rem;
+    }
+    label {
+      display: block;
+      font-weight: 600;
+      margin: 13px 0 6px;
+      font-size: 0.94rem;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 12px 13px;
+      border-radius: 12px;
+      border: 1px solid #cbd7e4;
+      background: #fff;
+      font: inherit;
+      color: var(--ink);
+    }
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+    .row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    @media (max-width: 640px) {
+      .row {
+        grid-template-columns: 1fr;
+      }
+    }
+    .checks {
+      display: grid;
+      gap: 10px;
+      margin: 14px 0 6px;
+    }
+    .check {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      font-size: 0.92rem;
+      color: var(--ink);
+    }
+    .check input {
+      width: auto;
+      margin-top: 3px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      border: 0;
+      border-radius: 14px;
+      padding: 13px 18px;
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
+      background: linear-gradient(135deg, var(--brand), var(--brand2));
+      color: #fff;
+      width: 100%;
+      margin-top: 12px;
+      box-shadow: var(--shadow);
+    }
+    .btn:disabled {
+      opacity: 0.65;
+      cursor: not-allowed;
+    }
+    .btn-sec {
+      background: #eef4fa;
+      color: var(--ink);
+      border: 1px solid var(--line);
+      box-shadow: none;
+    }
+    .msg {
+      margin-top: 14px;
+      padding: 13px 14px;
+      border-radius: 12px;
+      font-size: 0.94rem;
+      display: none;
+    }
+    .msg.ok {
+      display: block;
+      background: #edf9f1;
+      border: 1px solid #b9e3c6;
+      color: var(--ok);
+    }
+    .msg.err {
+      display: block;
+      background: #fff2f0;
+      border: 1px solid #f2c0b8;
+      color: var(--danger);
+    }
+    .pill {
+      display: inline-block;
+      padding: 5px 10px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      background: #eaf2f9;
+      color: var(--brand);
+      margin-bottom: 6px;
+    }
+    .list {
+      display: grid;
+      gap: 12px;
+    }
+    .item {
+      padding: 14px;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+    }
+    .security-note {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-top: 10px;
+    }
+    footer {
+      text-align: center;
+      padding: 32px 0 16px;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+  </style>
+
+  <!-- Hoja de estilos externa con control de versión -->
+  <link rel="stylesheet" href="content.css?v=20260928-3">
 </head>
 <body>
-  <div id="app-loading" style="display:flex;justify-content:center;align-items:center;height:100vh;font-family:sans-serif;color:#64748b;">
-    <p>Cargando espacio CERCA...</p>
+  <div class="wrap">
+    <!-- Barra superior -->
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo">C</div>
+        <div>
+          <h1>CERCA</h1>
+          <p>Cerca de Dios, cerca de ti</p>
+        </div>
+      </div>
+      <a class="adminlink" href="equipo.html">Equipo CERCA</a>
+    </header>
+
+    <!-- Sección principal (Hero) -->
+    <section class="hero">
+      <h2>Un espacio de fe, escucha y esperanza</h2>
+      <p>Consuelo, Esperanza, Restauración, Comunión y Acompañamiento. Compartimos tus cargas en oración y caminamos junto a ti con orientación cristiana.</p>
+      <div class="badges">
+        <span class="badge">🙏 Peticiones de oración</span>
+        <span class="badge">💬 Orientación espiritual</span>
+        <span class="badge">🤝 Acompañamiento confidencial</span>
+      </div>
+    </section>
+
+    <!-- Contenedor dinámico e interactivo -->
+    <main id="app-content" class="grid">
+      <section class="card">
+        <h3>Envíanos tu petición o mensaje</h3>
+        <p class="sub">Estamos aquí para orar por ti y brindarte apoyo espiritual.</p>
+        
+        <form id="cerca-form">
+          <div class="row">
+            <div>
+              <label for="nombre">Nombre o seudónimo</label>
+              <input type="text" id="nombre" name="nombre" placeholder="Ej. María / Anónimo" required>
+            </div>
+            <div>
+              <label for="tipo">Tipo de solicitud</label>
+              <select id="tipo" name="tipo" required>
+                <option value="oracion">Petición de oración</option>
+                <option value="orientacion">Orientación espiritual</option>
+                <option value="agradecimiento">Testimonio / Agradecimiento</option>
+              </select>
+            </div>
+          </div>
+
+          <label for="contacto">Correo o WhatsApp (opcional, si deseas respuesta)</label>
+          <input type="text" id="contacto" name="contacto" placeholder="Para comunicarnos contigo si lo solicitas">
+
+          <label for="mensaje">Tu mensaje o motivo de oración</label>
+          <textarea id="mensaje" name="mensaje" placeholder="Escribe aquí con confianza..." required></textarea>
+
+          <p class="security-note">Por tu seguridad, no compartas contraseñas, datos bancarios ni documentos de identidad completos.</p>
+
+          <div class="checks">
+            <label class="check">
+              <input type="checkbox" id="privacidad" required>
+              <span>Acepto que el equipo de CERCA reciba este mensaje para orar y/o brindarme acompañamiento espiritual.</span>
+            </label>
+          </div>
+
+          <button type="submit" class="btn">Enviar mensaje a CERCA</button>
+          <div id="form-msg" class="msg"></div>
+        </form>
+      </section>
+
+      <aside class="list">
+        <div class="card">
+          <span class="pill">Palabra de aliento</span>
+          <h3>«Cercano está Jehová a los quebrantados de corazón»</h3>
+          <p class="sub">Salmos 34:18 — No estás solo en tu proceso. Dios escucha tu oración y tiene cuidado de tu vida.</p>
+        </div>
+
+        <div class="card">
+          <span class="pill">Comunidad</span>
+          <h3>¿Cómo funciona CERCA?</h3>
+          <div class="list">
+            <div class="item">
+              <strong>1. Comparte tu necesidad:</strong> Escribe tu motivo de oración o solicitud de escucha.
+            </div>
+            <div class="item">
+              <strong>2. Intercesión y cuidado:</strong> Nuestro equipo ora por cada petición recibida con respeto y confidencialidad.
+            </div>
+            <div class="item">
+              <strong>3. Acompañamiento:</strong> Si dejaste un medio de contacto y pediste orientación, nos comunicaremos contigo.
+            </div>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <p>© CERCA — Consuelo, Esperanza, Restauración, Comunión y Acompañamiento.</p>
+    </footer>
   </div>
 
-<script>
-(async () => {
-  try {
-    const base64Data = "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");
-
-    const ds = new DecompressionStream("gzip");
-    const binaryString = atob(base64Data);
-    const bytes = Uint8Array.from(binaryString, m => m.charCodeAt(0));
-    
-    let decompressedText = await new Response(new Blob([bytes]).stream().pipeThrough(ds)).text();
-
-    // Reemplazos limpios y seguros
-    decompressedText = decompressedText.replace(/<div class="notice"><strong>Importante:<\/strong>[\s\S]*?<\/div>/, "");
-    decompressedText = decompressedText.replace(
-      "No envíes contraseñas, datos bancarios ni documentos de identidad completos. CERCA no sustituye servicios de urgencias ni atención de emergencia.",
-      "Por tu seguridad, no compartas contraseñas, datos bancarios ni documentos de identidad completos."
-    );
-    decompressedText = decompressedText.replace('class="adminlink" href="admin.html">Equipo CERCA', 'class="adminlink" href="equipo.html">Equipo CERCA');
-    
-    // Inyectar CSS y JS externos de forma limpia
-    decompressedText = decompressedText.replace("</head>", '<link rel="stylesheet" href="content.css?v=20260928-3"></head>');
-    decompressedText = decompressedText.replace("</body>", '<script src="content.js?v=20260928-3"></scr' + 'ipt></body>');
-
-    document.open();
-    document.write(decompressedText);
-    document.close();
-  } catch (error) {
-    console.error("Error al descomprimir el contenido de CERCA:", error);
-    document.body.innerHTML = '<div style="text-align:center;margin-top:20vh;font-family:sans-serif;"><h2>Lo sentimos</h2><p>Hubo un problema al cargar el sitio. Por favor, recarga la página.</p></div>';
-  }
-})();
-</script>
+  <!-- Script externo con tus funcionalidades adicionales -->
+  <script src="content.js?v=20260928-3"></script>
 </body>
 </html>
