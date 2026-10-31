@@ -26,7 +26,6 @@
   <meta name="twitter:description" content="Un espacio cristiano de consuelo, esperanza, restauración, comunión y acompañamiento.">
   <meta name="twitter:image" content="https://pyncovnrhiuwmipyxfae.supabase.co/functions/v1/cerca-social-card?v=1">
 
-  <!-- Estilos base recuperados y optimizados -->
   <style>
     :root {
       --bg: #f6f8fb;
@@ -42,9 +41,7 @@
       --shadow: 0 12px 32px rgba(17, 37, 56, 0.08);
       --radius: 18px;
     }
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
     body {
       margin: 0;
       font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -52,15 +49,8 @@
       color: var(--ink);
       line-height: 1.55;
     }
-    a {
-      color: var(--brand);
-      text-decoration: none;
-    }
-    .wrap {
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 20px;
-    }
+    a { color: var(--brand); text-decoration: none; }
+    .wrap { max-width: 1120px; margin: 0 auto; padding: 20px; }
     .topbar {
       display: flex;
       justify-content: space-between;
@@ -69,11 +59,7 @@
       padding: 8px 0 18px;
       flex-wrap: wrap;
     }
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
+    .brand { display: flex; align-items: center; gap: 12px; }
     .logo {
       width: 44px;
       height: 44px;
@@ -85,27 +71,19 @@
       font-weight: 800;
       box-shadow: var(--shadow);
     }
-    .brand h1 {
-      font-size: 1.25rem;
-      margin: 0;
-    }
-    .brand p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 0.92rem;
-    }
+    .brand h1 { font-size: 1.25rem; margin: 0; }
+    .brand p { margin: 0; color: var(--muted); font-size: 0.92rem; }
+    .nav-links { display: flex; gap: 8px; flex-wrap: wrap; }
     .adminlink {
-      font-size: 0.92rem;
-      padding: 10px 14px;
+      font-size: 0.9rem;
+      padding: 9px 14px;
       border-radius: 12px;
       background: #fff;
       border: 1px solid var(--line);
       font-weight: 600;
       transition: background 0.2s;
     }
-    .adminlink:hover {
-      background: #f1f5f9;
-    }
+    .adminlink:hover { background: #f1f5f9; }
     .hero {
       background: linear-gradient(135deg, rgba(31, 95, 139, 0.96), rgba(47, 125, 109, 0.93));
       color: #fff;
@@ -114,20 +92,9 @@
       box-shadow: var(--shadow);
       margin-bottom: 24px;
     }
-    .hero h2 {
-      margin: 0 0 10px;
-      font-size: clamp(1.6rem, 2.8vw, 2.35rem);
-    }
-    .hero p {
-      margin: 0 0 18px;
-      max-width: 760px;
-      color: rgba(255, 255, 255, 0.92);
-    }
-    .badges {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
+    .hero h2 { margin: 0 0 10px; font-size: clamp(1.6rem, 2.8vw, 2.35rem); }
+    .hero p { margin: 0 0 18px; max-width: 760px; color: rgba(255, 255, 255, 0.92); }
+    .badges { display: flex; flex-wrap: wrap; gap: 10px; }
     .badge {
       background: rgba(255, 255, 255, 0.14);
       border: 1px solid rgba(255, 255, 255, 0.22);
@@ -141,11 +108,7 @@
       gap: 22px;
       align-items: start;
     }
-    @media (max-width: 920px) {
-      .grid {
-        grid-template-columns: 1fr;
-      }
-    }
+    @media (max-width: 920px) { .grid { grid-template-columns: 1fr; } }
     .card {
       background: var(--card);
       border: 1px solid var(--line);
@@ -153,23 +116,9 @@
       padding: 22px;
       box-shadow: var(--shadow);
     }
-    .card h3 {
-      margin-top: 0;
-      margin-bottom: 8px;
-      font-size: 1.2rem;
-    }
-    .sub {
-      color: var(--muted);
-      margin-top: 0;
-      margin-bottom: 18px;
-      font-size: 0.95rem;
-    }
-    label {
-      display: block;
-      font-weight: 600;
-      margin: 13px 0 6px;
-      font-size: 0.94rem;
-    }
+    .card h3 { margin-top: 0; margin-bottom: 8px; font-size: 1.2rem; }
+    .sub { color: var(--muted); margin-top: 0; margin-bottom: 18px; font-size: 0.95rem; }
+    label { display: block; font-weight: 600; margin: 13px 0 6px; font-size: 0.94rem; }
     input, select, textarea {
       width: 100%;
       padding: 12px 13px;
@@ -179,36 +128,12 @@
       font: inherit;
       color: var(--ink);
     }
-    textarea {
-      min-height: 120px;
-      resize: vertical;
-    }
-    .row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-    }
-    @media (max-width: 640px) {
-      .row {
-        grid-template-columns: 1fr;
-      }
-    }
-    .checks {
-      display: grid;
-      gap: 10px;
-      margin: 14px 0 6px;
-    }
-    .check {
-      display: flex;
-      gap: 10px;
-      align-items: flex-start;
-      font-size: 0.92rem;
-      color: var(--ink);
-    }
-    .check input {
-      width: auto;
-      margin-top: 3px;
-    }
+    textarea { min-height: 120px; resize: vertical; }
+    .row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    @media (max-width: 640px) { .row { grid-template-columns: 1fr; } }
+    .checks { display: grid; gap: 10px; margin: 14px 0 6px; }
+    .check { display: flex; gap: 10px; align-items: flex-start; font-size: 0.92rem; color: var(--ink); }
+    .check input { width: auto; margin-top: 3px; }
     .btn {
       display: inline-flex;
       align-items: center;
@@ -225,11 +150,10 @@
       width: 100%;
       margin-top: 12px;
       box-shadow: var(--shadow);
+      transition: opacity 0.2s, transform 0.2s;
     }
-    .btn:disabled {
-      opacity: 0.65;
-      cursor: not-allowed;
-    }
+    .btn:hover { opacity: 0.95; transform: translateY(-1px); }
+    .btn:disabled { opacity: 0.65; cursor: not-allowed; transform: none; }
     .btn-sec {
       background: #eef4fa;
       color: var(--ink);
@@ -243,18 +167,8 @@
       font-size: 0.94rem;
       display: none;
     }
-    .msg.ok {
-      display: block;
-      background: #edf9f1;
-      border: 1px solid #b9e3c6;
-      color: var(--ok);
-    }
-    .msg.err {
-      display: block;
-      background: #fff2f0;
-      border: 1px solid #f2c0b8;
-      color: var(--danger);
-    }
+    .msg.ok { display: block; background: #edf9f1; border: 1px solid #b9e3c6; color: var(--ok); }
+    .msg.err { display: block; background: #fff2f0; border: 1px solid #f2c0b8; color: var(--danger); }
     .pill {
       display: inline-block;
       padding: 5px 10px;
@@ -265,30 +179,36 @@
       color: var(--brand);
       margin-bottom: 6px;
     }
-    .list {
-      display: grid;
-      gap: 12px;
-    }
+    .list { display: grid; gap: 16px; }
     .item {
       padding: 14px;
       border-radius: 14px;
       border: 1px solid var(--line);
       background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
     }
-    .security-note {
-      font-size: 0.85rem;
-      color: var(--muted);
-      margin-top: 10px;
+    .wa-route-btn {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 14px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      background: #f8fafc;
+      color: var(--ink);
+      font-weight: 600;
+      font-size: 0.92rem;
+      transition: all 0.2s;
     }
-    footer {
-      text-align: center;
-      padding: 32px 0 16px;
-      color: var(--muted);
-      font-size: 0.88rem;
+    .wa-route-btn:hover {
+      background: #edf9f1;
+      border-color: #b9e3c6;
+      color: var(--ok);
     }
+    .security-note { font-size: 0.85rem; color: var(--muted); margin-top: 10px; }
+    footer { text-align: center; padding: 32px 0 16px; color: var(--muted); font-size: 0.88rem; }
   </style>
 
-  <!-- Hoja de estilos externa con control de versión -->
+  <!-- Hoja de estilos para las tarjetas de contenido dinámico -->
   <link rel="stylesheet" href="content.css?v=20260928-3">
 </head>
 <body>
@@ -302,7 +222,11 @@
           <p>Cerca de Dios, cerca de ti</p>
         </div>
       </div>
-      <a class="adminlink" href="equipo.html">Equipo CERCA</a>
+      <div class="nav-links">
+        <a class="adminlink" href="#cerca-content-section">Contenidos y Devocionales</a>
+        <a class="adminlink" href="equipo.html">Equipo CERCA</a>
+        <a class="adminlink" href="admin.html">Panel privado</a>
+      </div>
     </header>
 
     <!-- Sección principal (Hero) -->
@@ -311,49 +235,63 @@
       <p>Consuelo, Esperanza, Restauración, Comunión y Acompañamiento. Compartimos tus cargas en oración y caminamos junto a ti con orientación cristiana.</p>
       <div class="badges">
         <span class="badge">🙏 Peticiones de oración</span>
-        <span class="badge">💬 Orientación espiritual</span>
+        <span class="badge">💬 Orientación espiritual y psicológica</span>
         <span class="badge">🤝 Acompañamiento confidencial</span>
       </div>
     </section>
 
-    <!-- Contenedor dinámico e interactivo -->
-    <main id="app-content" class="grid">
+    <!-- Sección de Solicitudes y Rutas Directas -->
+    <main class="grid">
       <section class="card">
-        <h3>Envíanos tu petición o mensaje</h3>
-        <p class="sub">Estamos aquí para orar por ti y brindarte apoyo espiritual.</p>
+        <span class="pill">Formulario confidencial</span>
+        <h3>Envíanos tu petición o solicitud</h3>
+        <p class="sub">Nuestro equipo recibirá tu mensaje para orar por ti o brindarte acompañamiento personalizado.</p>
         
         <form id="cerca-form">
           <div class="row">
             <div>
-              <label for="nombre">Nombre o seudónimo</label>
-              <input type="text" id="nombre" name="nombre" placeholder="Ej. María / Anónimo" required>
+              <label for="full_name">Nombre o seudónimo</label>
+              <input type="text" id="full_name" name="full_name" placeholder="Ej. María / Anónimo" required>
             </div>
             <div>
-              <label for="tipo">Tipo de solicitud</label>
-              <select id="tipo" name="tipo" required>
-                <option value="oracion">Petición de oración</option>
-                <option value="orientacion">Orientación espiritual</option>
-                <option value="agradecimiento">Testimonio / Agradecimiento</option>
+              <label for="city">Ciudad o municipio</label>
+              <input type="text" id="city" name="city" placeholder="Ej. Bogotá, Medellín...">
+            </div>
+          </div>
+
+          <div class="row">
+            <div>
+              <label for="phone">WhatsApp o Teléfono (opcional)</label>
+              <input type="tel" id="phone" name="phone" placeholder="Ej. 300 123 4567">
+            </div>
+            <div>
+              <label for="request_type">¿En qué podemos acompañarte?</label>
+              <select id="request_type" name="request_type" required>
+                <option value="oracion">🙏 Petición de oración</option>
+                <option value="pastoral">📖 Orientación pastoral</option>
+                <option value="psicologia">🧠 Escucha y orientación psicológica</option>
+                <option value="evangelismo">✨ Conocer más de Dios</option>
+                <option value="hablar">💬 Necesito hablar con alguien</option>
+                <option value="ayuda">🤝 Solicitud de ayuda</option>
+                <option value="servir">🙌 Quiero servir en CERCA</option>
+                <option value="aporte">💛 Quiero realizar un aporte</option>
               </select>
             </div>
           </div>
 
-          <label for="contacto">Correo o WhatsApp (opcional, si deseas respuesta)</label>
-          <input type="text" id="contacto" name="contacto" placeholder="Para comunicarnos contigo si lo solicitas">
-
-          <label for="mensaje">Tu mensaje o motivo de oración</label>
-          <textarea id="mensaje" name="mensaje" placeholder="Escribe aquí con confianza..." required></textarea>
+          <label for="message">Tu mensaje o motivo de oración</label>
+          <textarea id="message" name="message" placeholder="Escribe aquí con total confianza..." required></textarea>
 
           <p class="security-note">Por tu seguridad, no compartas contraseñas, datos bancarios ni documentos de identidad completos.</p>
 
           <div class="checks">
             <label class="check">
               <input type="checkbox" id="privacidad" required>
-              <span>Acepto que el equipo de CERCA reciba este mensaje para orar y/o brindarme acompañamiento espiritual.</span>
+              <span>Autorizo al equipo de CERCA a recibir este mensaje para orar y/o contactarme si solicité acompañamiento.</span>
             </label>
           </div>
 
-          <button type="submit" class="btn">Enviar mensaje a CERCA</button>
+          <button type="submit" id="submit-btn" class="btn">Enviar solicitud a CERCA</button>
           <div id="form-msg" class="msg"></div>
         </form>
       </section>
@@ -362,33 +300,152 @@
         <div class="card">
           <span class="pill">Palabra de aliento</span>
           <h3>«Cercano está Jehová a los quebrantados de corazón»</h3>
-          <p class="sub">Salmos 34:18 — No estás solo en tu proceso. Dios escucha tu oración y tiene cuidado de tu vida.</p>
+          <p class="sub" style="margin-bottom:0">Salmos 34:18 — No estás solo en tu proceso. Dios escucha tu oración y tiene cuidado de tu vida.</p>
         </div>
 
         <div class="card">
-          <span class="pill">Comunidad</span>
+          <span class="pill">Contacto directo</span>
+          <h3>Líneas de WhatsApp por área</h3>
+          <p class="sub">Si prefieres escribir directamente a un área específica:</p>
+          <div id="public-routes" class="list" style="gap:10px">
+            <div class="item">Cargando líneas de atención...</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <span class="pill">Paso a paso</span>
           <h3>¿Cómo funciona CERCA?</h3>
-          <div class="list">
-            <div class="item">
-              <strong>1. Comparte tu necesidad:</strong> Escribe tu motivo de oración o solicitud de escucha.
-            </div>
-            <div class="item">
-              <strong>2. Intercesión y cuidado:</strong> Nuestro equipo ora por cada petición recibida con respeto y confidencialidad.
-            </div>
-            <div class="item">
-              <strong>3. Acompañamiento:</strong> Si dejaste un medio de contacto y pediste orientación, nos comunicaremos contigo.
-            </div>
+          <div class="list" style="gap:10px">
+            <div class="item"><strong>1. Comparte tu necesidad:</strong> Envía tu motivo de oración o solicitud en el formulario.</div>
+            <div class="item"><strong>2. Intercesión:</strong> Nuestro equipo ora por cada petición recibida con total reserva.</div>
+            <div class="item"><strong>3. Seguimiento:</strong> Si dejaste tu número de WhatsApp, un orientador se pondrá en contacto contigo.</div>
           </div>
         </div>
       </aside>
     </main>
+
+    <!-- Contenedor donde content.js carga las publicaciones de content_posts -->
+    <section id="cerca-content-section" style="margin-top: 36px;"></section>
 
     <footer>
       <p>© CERCA — Consuelo, Esperanza, Restauración, Comunión y Acompañamiento.</p>
     </footer>
   </div>
 
-  <!-- Script externo con tus funcionalidades adicionales -->
+  <!-- Lógica de conexión con Supabase para el formulario y las rutas de WhatsApp -->
+  <script>
+  (() => {
+    const SUPABASE_URL = 'https://pyncovnrhiuwmipyxfae.supabase.co';
+    const SUPABASE_KEY = 'sb_publishable_N6tfAKab0Unt6pIIbnO8YA_wpw_JHbu';
+
+    const form = document.getElementById('cerca-form');
+    const submitBtn = document.getElementById('submit-btn');
+    const formMsg = document.getElementById('form-msg');
+    const routesBox = document.getElementById('public-routes');
+
+    function showMessage(text, isError = false) {
+      formMsg.textContent = text;
+      formMsg.className = 'msg ' + (isError ? 'err' : 'ok');
+    }
+
+    // Mapea el tipo seleccionado a request_type y route_key tal como los filtra admin.html
+    function resolveRouting(selectedValue) {
+      if (['pastoral', 'psicologia', 'evangelismo'].includes(selectedValue)) {
+        return { request_type: 'hablar', route_key: selectedValue };
+      }
+      if (selectedValue === 'conocer') {
+        return { request_type: 'conocer', route_key: 'evangelismo' };
+      }
+      return { request_type: selectedValue, route_key: selectedValue };
+    }
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Enviando mensaje...';
+      formMsg.className = 'msg';
+
+      const fullName = document.getElementById('full_name').value.trim() || 'Anónimo';
+      const city = document.getElementById('city').value.trim() || null;
+      const phone = document.getElementById('phone').value.trim() || null;
+      const rawType = document.getElementById('request_type').value;
+      const message = document.getElementById('message').value.trim();
+
+      const { request_type, route_key } = resolveRouting(rawType);
+
+      const payload = {
+        full_name: fullName,
+        city: city,
+        phone: phone,
+        request_type: request_type,
+        route_key: route_key,
+        message: message,
+        status: 'nuevo',
+        priority: 'normal'
+      };
+
+      try {
+        const res = await fetch(SUPABASE_URL + '/rest/v1/public_requests', {
+          method: 'POST',
+          headers: {
+            'apikey': SUPABASE_KEY,
+            'Authorization': 'Bearer ' + SUPABASE_KEY,
+            'Content-Type': 'application/json',
+            'Prefer': 'return=minimal'
+          },
+          body: JSON.stringify(payload)
+        });
+
+        if (!res.ok) {
+          const errText = await res.text();
+          throw new Error(errText || 'No se pudo registrar tu solicitud.');
+        }
+
+        showMessage('¡Gracias por escribirnos! Tu mensaje ha sido recibido por el equipo de CERCA.', false);
+        form.reset();
+      } catch (err) {
+        console.error('Error al enviar formulario:', err);
+        showMessage('Hubo un inconveniente al enviar tu mensaje. Por favor intenta de nuevo o escríbenos por WhatsApp.', true);
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Enviar solicitud a CERCA';
+      }
+    });
+
+    // Cargar las rutas de WhatsApp configuradas en el panel admin
+    async function loadPublicRoutes() {
+      try {
+        const res = await fetch(SUPABASE_URL + '/rest/v1/contact_routes?select=*&order=route_key', {
+          headers: { 'apikey': SUPABASE_KEY, 'Authorization': 'Bearer ' + SUPABASE_KEY }
+        });
+        if (!res.ok) throw new Error('Error al cargar rutas');
+        const routes = await res.json();
+        const activeRoutes = (routes || []).filter(r => r.whatsapp_number && String(r.whatsapp_number).trim() !== '');
+
+        if (!activeRoutes.length) {
+          routesBox.innerHTML = '<div class="item">Usa el formulario principal y te asignaremos un orientador.</div>';
+          return;
+        }
+
+        routesBox.innerHTML = activeRoutes.map(r => {
+          const num = String(r.whatsapp_number).replace(/\D/g, '');
+          const finalNum = num.startsWith('57') ? num : '57' + num;
+          const text = encodeURIComponent('Hola, vengo desde la página CERCA y me gustaría recibir orientación en el área de ' + (r.display_name || r.route_key) + '.');
+          return `<a class="wa-route-btn" target="_blank" rel="noopener" href="https://wa.me/${finalNum}?text=${text}">
+            <span>${r.display_name || r.route_key}</span>
+            <span>Escribir por WhatsApp →</span>
+          </a>`;
+        }).join('');
+      } catch {
+        routesBox.innerHTML = '<div class="item">Usa el formulario principal para ponerte en contacto con nosotros.</div>';
+      }
+    }
+
+    loadPublicRoutes();
+  })();
+  </script>
+
+  <!-- Script externo de contenidos y devocionales -->
   <script src="content.js?v=20260928-3"></script>
 </body>
 </html>
